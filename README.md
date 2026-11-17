@@ -39,6 +39,9 @@
 - Работает на прошивках на русском, английском, китайском и испанском; интерфейс приложения переводится по языку системы.
 - После перезагрузки машины служба включается сама.
 - В настройках: «О приложении» и поддержка проекта (maib / PayPal по QR).
+- Работает на прошивках на русском, английском, китайском и испанском; интерфейс приложения переводится по языку системы.
+- После перезагрузки машины служба включается сама.
+- В настройках: «О приложении» и поддержка проекта (maib / PayPal по QR).
 
 ### Скриншоты
 
@@ -84,6 +87,9 @@
 - Works on Russian, English, Chinese and Spanish firmware; the app UI follows the system language.
 - The service turns itself back on after the car reboots.
 - Settings include an About section with project support (maib / PayPal via QR).
+- Works on Russian, English, Chinese and Spanish firmware; the app UI follows the system language.
+- The service turns itself back on after the car reboots.
+- Settings include an About section with project support (maib / PayPal via QR).
 
 ### Screenshots
 
@@ -120,6 +126,9 @@ See the screenshots [above](#-русский) (UI language is Russian).
 - 日间 / 夜间主题（跟随系统或手动选择）。
 - 自动连接香氛机，断线后自动重连。
 - 设置界面：服务状态、按钮位置、主题、工作 / 间歇周期、搜索并选择香氛机。
+- 支持俄语、英语、中文和西班牙语固件；应用界面随系统语言切换。
+- 车辆重启后服务自动重新启用。
+- 设置中包含“关于”及支持项目（maib / PayPal 二维码）。
 - 支持俄语、英语、中文和西班牙语固件；应用界面随系统语言切换。
 - 车辆重启后服务自动重新启用。
 - 设置中包含“关于”及支持项目（maib / PayPal 二维码）。
