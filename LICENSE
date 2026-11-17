@@ -1,0 +1,156 @@
+UnlimAroma — Proprietary Source-Available License
+Copyright (c) 2026 Alexandru Volovoi (https://github.com/mfkilla13). All rights reserved.
+
+The English text below is the governing version. The Russian and Chinese
+texts are translations provided for convenience.
+
+=============================================================================
+ENGLISH
+=============================================================================
+
+This software, including its source code, compiled application (APK), icons,
+images, user interface design and documentation (together, the "Software"),
+is the property of the copyright holder named above and is protected by
+copyright law. The source code is published for reference only. Publishing it
+does NOT make the Software open source.
+
+1. PERMITTED USE
+   You may, free of charge:
+   a) view and read the source code;
+   b) download the official APK from this repository's Releases page, or build
+      it from this source code, and install it on vehicles that you personally
+      own or use, for your own private, non-commercial use;
+   c) link to this repository.
+
+2. PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION OF THE COPYRIGHT HOLDER
+   a) copying, redistributing, re-uploading, mirroring or publishing the
+      Software or any part of it, in source or compiled form, on any website,
+      store, forum, chat, file-sharing service or other medium;
+   b) selling, renting, licensing, or otherwise using the Software or any part
+      of it for any commercial purpose, including pre-installing it on
+      vehicles or head units that are sold, rented or serviced for payment;
+   c) modifying the Software and distributing the modified version, or
+      creating and distributing derivative works based on it;
+   d) using substantial parts of the source code, the BLE protocol
+      implementation, the user interface design, icons or images in another
+      product;
+   e) removing or altering copyright notices, the author's name or this
+      license, or presenting the Software as your own work.
+
+   Forking this repository on GitHub is allowed only as far as the GitHub
+   Terms of Service require; a fork does not grant any of the rights listed in
+   section 2.
+
+3. PERMISSION REQUESTS
+   To request permission for any use not covered by section 1, contact the
+   copyright holder through https://github.com/mfkilla13. Permission is valid
+   only if given in writing.
+
+4. TERMINATION
+   Any use that violates this license automatically terminates your rights
+   under it. You must then stop using the Software and delete all copies.
+
+5. NO WARRANTY / LIMITATION OF LIABILITY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM,
+   DAMAGES OR OTHER LIABILITY, INCLUDING DAMAGE TO A VEHICLE, ITS HEAD UNIT OR
+   ANY CONNECTED DEVICE, ARISING FROM THE USE OF THE SOFTWARE. Do not operate
+   the Software while driving in a way that distracts you from the road.
+
+6. TRADEMARKS
+   "Li Auto" and related names are trademarks of their respective owners. This
+   is an unofficial project and is not affiliated with or endorsed by Li Auto.
+
+=============================================================================
+РУССКИЙ (перевод)
+=============================================================================
+
+UnlimAroma — проприетарная лицензия с открытым для просмотра исходным кодом.
+Copyright (c) 2026 Alexandru Volovoi. Все права защищены.
+
+Программа, включая исходный код, собранное приложение (APK), иконки,
+изображения, дизайн интерфейса и документацию («Программа»), принадлежит
+указанному правообладателю и охраняется авторским правом. Исходный код
+опубликован только для ознакомления. Программа НЕ является open source.
+
+1. РАЗРЕШЕНО бесплатно:
+   а) просматривать и читать исходный код;
+   б) скачивать официальный APK из раздела Releases этого репозитория или
+      собирать его из этого кода и устанавливать на автомобили, которыми вы
+      лично владеете или пользуетесь, для личного некоммерческого
+      использования;
+   в) давать ссылку на этот репозиторий.
+
+2. ЗАПРЕЩЕНО без предварительного письменного разрешения правообладателя:
+   а) копировать, распространять, перезаливать, зеркалировать или публиковать
+      Программу или её части (в виде кода или APK) на любых сайтах, в
+      магазинах, форумах, чатах, файлообменниках и других местах;
+   б) продавать, сдавать в аренду, лицензировать или иначе использовать
+      Программу или её части в коммерческих целях, в том числе
+      предустанавливать её на автомобили или головные устройства, которые
+      продаются, сдаются в аренду или обслуживаются за плату;
+   в) изменять Программу и распространять изменённую версию, создавать и
+      распространять производные работы;
+   г) использовать существенные части кода, реализацию BLE-протокола, дизайн
+      интерфейса, иконки или изображения в другом продукте;
+   д) удалять или изменять уведомления об авторских правах, имя автора или
+      эту лицензию, выдавать Программу за свою работу.
+
+   Форк репозитория на GitHub допускается только в объёме, который требуют
+   Условия использования GitHub, и не даёт прав из раздела 2.
+
+3. ЗАПРОС РАЗРЕШЕНИЯ: через https://github.com/mfkilla13. Разрешение
+   действительно только в письменной форме.
+
+4. ПРЕКРАЩЕНИЕ: любое нарушение лицензии автоматически прекращает ваши права
+   по ней; вы обязаны прекратить использование и удалить все копии.
+
+5. БЕЗ ГАРАНТИЙ: Программа предоставляется «как есть», без каких-либо
+   гарантий. Правообладатель не несёт ответственности за любой ущерб, включая
+   ущерб автомобилю, головному устройству или подключённым устройствам.
+
+6. ТОВАРНЫЕ ЗНАКИ: «Li Auto» и связанные названия принадлежат их владельцам.
+   Проект неофициальный и не связан с Li Auto.
+
+=============================================================================
+中文（译文）
+=============================================================================
+
+UnlimAroma —— 专有许可（源代码仅供查看）
+Copyright (c) 2026 Alexandru Volovoi。保留所有权利。
+
+本软件（包括源代码、编译后的应用 APK、图标、图片、界面设计及文档，统称
+“本软件”）归上述版权所有者所有，受著作权法保护。源代码仅供参考查阅，
+本软件并非开源软件。
+
+1. 允许（免费）：
+   a) 查看和阅读源代码；
+   b) 从本仓库 Releases 页面下载官方 APK，或用本源代码自行编译，并安装在您
+      本人拥有或使用的车辆上，仅限个人非商业用途；
+   c) 链接到本仓库。
+
+2. 未经版权所有者事先书面许可，禁止：
+   a) 以任何形式（源代码或 APK）在任何网站、应用商店、论坛、聊天群、网盘或
+      其他媒介上复制、分发、转载、镜像或发布本软件或其任何部分；
+   b) 出售、出租、授权或以其他方式将本软件或其任何部分用于商业目的，包括
+      预装在出售、出租或有偿维修的车辆或车机上；
+   c) 修改本软件并分发修改版本，或基于本软件创作并分发衍生作品；
+   d) 在其他产品中使用本软件源代码的实质部分、BLE 协议实现、界面设计、
+      图标或图片；
+   e) 删除或修改版权声明、作者名称或本许可，或将本软件冒充为自己的作品。
+
+   仅在 GitHub 服务条款要求的范围内允许在 GitHub 上 Fork 本仓库，Fork 并
+   不授予第 2 条所列的任何权利。
+
+3. 申请许可：请通过 https://github.com/mfkilla13 联系版权所有者，许可仅以
+   书面形式有效。
+
+4. 终止：任何违反本许可的使用将自动终止您在本许可下的权利，您必须停止使用
+   并删除所有副本。
+
+5. 免责声明：本软件按“原样”提供，不提供任何形式的保证。对于因使用本软件
+   造成的任何损害（包括对车辆、车机或所连接设备的损害），版权所有者概不
+   负责。
+
+6. 商标：“理想汽车 / Li Auto”及相关名称为其各自所有者的商标。本项目为非
+   官方项目，与理想汽车无关。
