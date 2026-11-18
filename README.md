@@ -52,11 +52,17 @@
 
 ### Установка
 
-1. Скачайте `aroma-app.apk` из раздела [Releases](../../releases).
-2. Установите его на головное устройство Li Auto (через установщик UnlimBoostMD или вручную по ADB).
-3. Включите службу **UnlimAroma** в настройках доступности и выдайте разрешение «Поверх других окон».
-4. Откройте приложение, в разделе «Выбор станции» найдите свою «Fresh Air» и выберите её. Перед поиском отключите станцию от телефона (WeChat), иначе её не будет видно.
+Нужен компьютер с Windows и USB-кабель с передачей данных.
+
+1. Скачайте `UnlimAroma-<версия>.zip` из раздела [Releases](../../releases) и распакуйте (внутри `aroma-app.apk` и `install.bat`).
+2. Машина на P, на машине включена отладка по USB. Подключите кабель.
+3. Запустите `install.bat`. В первый раз подтвердите на экране машины «Разрешить отладку по USB».
+   Установщик сам поставит приложение, выдаст разрешения и включит службу кнопки — в том числе её автовключение после перезагрузки машины.
+4. На машине в UnlimAroma нажмите «Найти станции» и выберите свою «Fresh Air». Перед поиском отключите станцию от телефона (WeChat), иначе её не будет видно.
 5. Откройте экран климата — там появится кнопка «Аромат».
+
+Если установщик пишет, что не найден `adb.exe`, скачайте [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools) для Windows и распакуйте папку `platform-tools` рядом с `install.bat`.
+Приложение также можно поставить через установщик UnlimBoostMD.
 
 ### Лицензия
 
@@ -91,11 +97,17 @@ See the screenshots [above](#-русский) (UI language is Russian).
 
 ### Install
 
-1. Download `aroma-app.apk` from the [Releases](../../releases) page.
-2. Install it on the Li Auto head unit (via the UnlimBoostMD installer or manually over ADB).
-3. Enable the **UnlimAroma** service in Accessibility settings and grant the "Display over other apps" permission.
-4. Open the app, go to "Station selection", find your "Fresh Air" and select it. Disconnect the station from your phone (WeChat) first, otherwise it won't be visible.
+You need a Windows PC and a USB data cable.
+
+1. Download `UnlimAroma-<version>.zip` from the [Releases](../../releases) page and unzip it (it contains `aroma-app.apk` and `install.bat`).
+2. Put the car in P and enable USB debugging on the head unit. Connect the cable.
+3. Run `install.bat`. The first time, confirm "Allow USB debugging" on the car screen.
+   The installer installs the app, grants its permissions and enables the button service, including re-enabling it automatically after the car reboots.
+4. In UnlimAroma on the car tap "Find stations" and select your "Fresh Air". Disconnect the station from your phone (WeChat) first, otherwise it won't be visible.
 5. Open the climate screen — the "Aroma" button is there.
+
+If the installer says `adb.exe` was not found, download [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools) for Windows and unzip the `platform-tools` folder next to `install.bat`.
+The app can also be installed with the UnlimBoostMD installer.
 
 ### License
 
@@ -130,11 +142,17 @@ See the screenshots [above](#-русский) (UI language is Russian).
 
 ### 安装
 
-1. 从 [Releases](../../releases) 页面下载 `aroma-app.apk`。
-2. 将其安装到理想汽车车机上（通过 UnlimBoostMD 安装器或手动使用 ADB）。
-3. 在无障碍设置中开启 **UnlimAroma** 服务，并授予“显示在其他应用上层”权限。
-4. 打开应用，在“选择香氛机”中搜索并选择你的 “Fresh Air”。搜索前请先断开香氛机与手机（微信）的连接，否则无法搜索到。
+需要一台 Windows 电脑和一根支持数据传输的 USB 线。
+
+1. 从 [Releases](../../releases) 页面下载 `UnlimAroma-<版本>.zip` 并解压（内含 `aroma-app.apk` 和 `install.bat`）。
+2. 车辆挂 P 挡，在车机上开启 USB 调试，连接数据线。
+3. 运行 `install.bat`。首次使用时，请在车机屏幕上确认“允许 USB 调试”。
+   安装程序会自动安装应用、授予权限并开启按钮服务，包括车辆重启后自动重新开启。
+4. 在车机上打开 UnlimAroma，点击“搜索”，选择你的 “Fresh Air”。搜索前请先断开香氛机与手机（微信）的连接，否则无法搜索到。
 5. 打开空调界面，即可看到“香氛”按钮。
+
+如果安装程序提示找不到 `adb.exe`，请下载 Windows 版 [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools)，并将 `platform-tools` 文件夹解压到 `install.bat` 旁边。
+也可以通过 UnlimBoostMD 安装器安装本应用。
 
 ### 许可
 

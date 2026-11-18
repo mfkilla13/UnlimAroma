@@ -1,0 +1,2 @@
+# keep Windows line endings in batch files byte-for-byte
+*.bat -text
