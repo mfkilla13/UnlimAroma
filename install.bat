@@ -73,6 +73,8 @@ if "%WANT%"=="lite" goto :lite
 echo [1/4] Установка приложения...
 "%ADB%" -s %DEV% install -r -g "%APK%"
 if errorlevel 1 goto :install_failed
+rem Android 12 returns an empty Bluetooth scan without location access: the station would not be found
+call :grant_location
 
 echo [2/4] Разрешения: окно поверх и автовключение службы после перезагрузки...
 "%ADB%" -s %DEV% shell appops set %PKG% SYSTEM_ALERT_WINDOW allow >nul 2>nul
@@ -103,6 +105,8 @@ goto :end
 echo [1/2] Установка приложения...
 "%ADB%" -s %DEV% install -r -g "%APK%"
 if errorlevel 1 goto :install_failed
+rem Android 12 returns an empty Bluetooth scan without location access: the station would not be found
+call :grant_location
 
 echo [2/2] Открываю приложение на машине...
 "%ADB%" -s %DEV% shell am start -n %PKG%/%ACT% >nul 2>nul
@@ -141,3 +145,11 @@ goto :end
 echo.
 if not defined QUIET pause
 endlocal
+exit /b
+
+:grant_location
+"%ADB%" -s %DEV% shell pm grant %PKG% android.permission.ACCESS_FINE_LOCATION >nul 2>nul
+"%ADB%" -s %DEV% shell pm grant %PKG% android.permission.ACCESS_COARSE_LOCATION >nul 2>nul
+"%ADB%" -s %DEV% shell appops set %PKG% FINE_LOCATION allow >nul 2>nul
+"%ADB%" -s %DEV% shell appops set %PKG% COARSE_LOCATION allow >nul 2>nul
+exit /b 0
