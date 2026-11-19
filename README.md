@@ -38,6 +38,7 @@
 - Экран настройки: включение службы, положение кнопки, тема, цикл работа/пауза, поиск и выбор станции.
 - Работает на прошивках на русском, английском, китайском и испанском; интерфейс приложения переводится по языку системы.
 - После перезагрузки машины служба включается сама.
+- Каталог ароматов: свои названия, описания и цвета ароматов вместо заводских.
 - В настройках: «О приложении» и поддержка проекта (maib / PayPal по QR).
 
 ### Скриншоты
@@ -64,6 +65,23 @@
 | Lite: окно ароматизатора | Lite: настройки |
 |---|---|
 | ![](docs/screenshots/lite-window.png) | ![](docs/screenshots/lite-settings.png) |
+
+### Каталог ароматов
+
+С версии 0.4.0, в полной версии и в Lite: «Настройки» → «Каталог ароматов».
+
+- Свои ароматы: короткое название (до 14 символов), описание и цвет жидкости. Цвет выбирается пальцем на палитре (насыщенность, яркость и оттенок) или из быстрых цветов.
+- Любой заводской аромат можно показывать как свой: нажмите на него в списке и выберите, что показывать вместо него. Сбросить можно по одному (кнопка ×) или все сразу.
+- В окне ароматизатора у флакона своё название, цвет и описание, а мелкой строкой видно, вместо какого аромата он стоит.
+- Станция продолжает работать со своим флаконом: меняется только то, что видно в окне. Всё хранится на машине.
+
+| Каталог | Свой аромат |
+|---|---|
+| ![](docs/screenshots/catalog-list.png) | ![](docs/screenshots/catalog-editor.png) |
+
+| Что показывать вместо заводского | Результат в окне |
+|---|---|
+| ![](docs/screenshots/catalog-remap.png) | ![](docs/screenshots/catalog-window.png) |
 
 ### Установка
 
@@ -104,6 +122,7 @@
 - Setup screen: service status, button position, theme, work/pause cycle, station scan and selection.
 - Works on Russian, English, Chinese and Spanish firmware; the app UI follows the system language.
 - The service turns itself back on after the car reboots.
+- Scent catalog: your own scent names, descriptions and colours in place of the factory ones.
 - Settings include an About section with project support (maib / PayPal via QR).
 
 ### Screenshots
@@ -122,6 +141,17 @@ See the screenshots [above](#-русский) (UI language is Russian).
 A car can have only one version, full or Lite: the new one replaces the old one.
 
 Screenshots of Lite are [above](#unlimaroma-lite).
+
+### Scent catalog
+
+Since 0.4.0, in both the full version and Lite: "Settings" → "Scent catalog".
+
+- Your own scents: a short name (up to 14 characters), a description and a liquid colour, picked with a finger on a palette (saturation, brightness and hue) or from quick colours.
+- Any factory scent can be shown as one of yours: tap it in the list and choose what to show instead. Reset them one by one (× button) or all at once.
+- In the fragrance window the vial shows your name, colour and description, with a small line saying which scent it stands in for.
+- The unit keeps using its own bottle; only what the window shows changes. Everything is kept on the car.
+
+See the screenshots [above](#каталог-ароматов) (UI language is Russian).
 
 ### Install
 
@@ -162,6 +192,7 @@ The app can also be installed with the UnlimBoostMD installer.
 - 设置界面：服务状态、按钮位置、主题、工作 / 间歇周期、搜索并选择香氛机。
 - 支持俄语、英语、中文和西班牙语固件；应用界面随系统语言切换。
 - 车辆重启后服务自动重新启用。
+- 香氛目录：用自定义的名称、描述和颜色替代原厂香氛的显示。
 - 设置中包含“关于”及支持项目（maib / PayPal 二维码）。
 
 ### 截图
@@ -180,6 +211,17 @@ The app can also be installed with the UnlimBoostMD installer.
 车上只能安装其中一个版本（完整版或 Lite），新安装的会替换旧的。
 
 Lite 的截图见[上方](#unlimaroma-lite)。
+
+### 香氛目录
+
+自 0.4.0 起，完整版和 Lite 均可使用：“设置” → “香氛目录”。
+
+- 自定义香氛：简称（最多 14 个字符）、描述和液体颜色。颜色可用手指在调色板上选择（饱和度、亮度和色相），也可使用快捷颜色。
+- 任意原厂香氛都可显示为自定义香氛：在列表中点击它，选择替代显示的香氛。可逐个恢复（× 按钮）或全部恢复。
+- 香氛窗口中的香氛瓶会显示自定义的名称、颜色和描述，并用一行小字注明它替代的是哪种香氛。
+- 香氛机仍使用原有香氛瓶，只改变窗口中的显示。所有内容保存在车机上。
+
+截图见[上方](#каталог-ароматов)（界面语言为俄语）。
 
 ### 安装
 
