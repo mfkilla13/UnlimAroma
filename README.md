@@ -50,16 +50,31 @@
 |---|---|
 | ![](docs/screenshots/setup-screen.png) | ![](docs/screenshots/setup-station.png) |
 
+### UnlimAroma Lite
+
+**UnlimAroma Lite** — версия для тех, кто не хочет давать приложению особых разрешений. Это обычное приложение: оно открывается по значку (его можно закрепить в нижней панели или на рабочем столе) и показывает окно ароматизатора поверх рабочего стола. Кнопки на экране климата в Lite нет.
+
+- Не нужны служба доступности, показ поверх других окон и `WRITE_SECURE_SETTINGS`: только Bluetooth и геолокация (без неё Android не ищет Bluetooth-устройства).
+- То же окно ароматизатора: интенсивность, три флакона, сброс остатка. У выбранного аромата флакон открыт и в нём поднимаются пузырьки, чем крепче интенсивность, тем их больше.
+- Настройки спрятаны под кнопкой «Настройки»: станция и цикл работы, выбор станции, тема (как в системе / светлая / тёмная).
+- Окно закрывается нажатием мимо него или кнопкой «Назад».
+
+На машине может стоять только одна версия, полная или Lite: новая встаёт вместо старой.
+
+| Lite: окно ароматизатора | Lite: настройки |
+|---|---|
+| ![](docs/screenshots/lite-window.png) | ![](docs/screenshots/lite-settings.png) |
+
 ### Установка
 
 Нужен компьютер с Windows и USB-кабель с передачей данных.
 
-1. Скачайте `UnlimAroma-<версия>.zip` из раздела [Releases](../../releases) и распакуйте (внутри `aroma-app.apk` и `install.bat`).
+1. Скачайте из раздела [Releases](../../releases) архив нужной версии и распакуйте его: `UnlimAroma-<версия>.zip` — полная, `UnlimAroma-Lite-<версия>.zip` — Lite. Внутри APK и `install.bat`.
 2. Машина на P, на машине включена отладка по USB. Подключите кабель.
 3. Запустите `install.bat`. В первый раз подтвердите на экране машины «Разрешить отладку по USB».
-   Установщик сам поставит приложение, выдаст разрешения и включит службу кнопки — в том числе её автовключение после перезагрузки машины.
-4. На машине в UnlimAroma нажмите «Найти станции» и выберите свою «Fresh Air». Перед поиском отключите станцию от телефона (WeChat), иначе её не будет видно.
-5. Откройте экран климата — там появится кнопка «Аромат».
+   Для полной версии установщик сам поставит приложение, выдаст разрешения и включит службу кнопки — в том числе её автовключение после перезагрузки машины. Lite он просто ставит и открывает.
+4. На машине в UnlimAroma нажмите «Найти станции» (в Lite — сначала «Настройки») и выберите свою «Fresh Air». Перед поиском отключите станцию от телефона (WeChat), иначе её не будет видно.
+5. Полная версия: откройте экран климата — там появится кнопка «Аромат». Lite: открывайте приложение по значку.
 
 Если установщик пишет, что не найден `adb.exe`, скачайте [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools) для Windows и распакуйте папку `platform-tools` рядом с `install.bat`.
 Приложение также можно поставить через установщик UnlimBoostMD.
@@ -95,16 +110,29 @@
 
 See the screenshots [above](#-русский) (UI language is Russian).
 
+### UnlimAroma Lite
+
+**UnlimAroma Lite** is for those who don't want to give the app any special permissions. It is a regular app: open it from its icon (you can pin it to the dock or the home screen) and it shows the fragrance window over the home screen. Lite has no button on the climate screen.
+
+- No accessibility service, no drawing over other apps, no `WRITE_SECURE_SETTINGS`: only Bluetooth and location (Android needs location to scan for Bluetooth devices).
+- The same fragrance window: intensity, three vials, level reset. The selected vial is open with bubbles rising in it; the stronger the intensity, the more bubbles.
+- Settings are behind the "Settings" button: station and work cycle, station choice, theme (system / light / dark).
+- Close the window by tapping outside it or with Back.
+
+A car can have only one version, full or Lite: the new one replaces the old one.
+
+Screenshots of Lite are [above](#unlimaroma-lite).
+
 ### Install
 
 You need a Windows PC and a USB data cable.
 
-1. Download `UnlimAroma-<version>.zip` from the [Releases](../../releases) page and unzip it (it contains `aroma-app.apk` and `install.bat`).
+1. Download the archive of the version you want from the [Releases](../../releases) page and unzip it: `UnlimAroma-<version>.zip` is the full version, `UnlimAroma-Lite-<version>.zip` is Lite. It contains the APK and `install.bat`.
 2. Put the car in P and enable USB debugging on the head unit. Connect the cable.
 3. Run `install.bat`. The first time, confirm "Allow USB debugging" on the car screen.
-   The installer installs the app, grants its permissions and enables the button service, including re-enabling it automatically after the car reboots.
-4. In UnlimAroma on the car tap "Find stations" and select your "Fresh Air". Disconnect the station from your phone (WeChat) first, otherwise it won't be visible.
-5. Open the climate screen — the "Aroma" button is there.
+   For the full version the installer installs the app, grants its permissions and enables the button service, including re-enabling it automatically after the car reboots. Lite is simply installed and opened.
+4. In UnlimAroma on the car tap "Find stations" (in Lite open "Settings" first) and select your "Fresh Air". Disconnect the station from your phone (WeChat) first, otherwise it won't be visible.
+5. Full version: open the climate screen — the "Aroma" button is there. Lite: open the app from its icon.
 
 If the installer says `adb.exe` was not found, download [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools) for Windows and unzip the `platform-tools` folder next to `install.bat`.
 The app can also be installed with the UnlimBoostMD installer.
@@ -140,16 +168,29 @@ The app can also be installed with the UnlimBoostMD installer.
 
 请参见[上方](#-русский)的截图（界面语言为俄语）。
 
+### UnlimAroma Lite
+
+**UnlimAroma Lite** 适合不想给应用任何特殊权限的用户。它是一个普通应用：点击图标打开（可固定到底部栏或桌面），在桌面上方显示香氛窗口。Lite 不在空调界面中添加按钮。
+
+- 不需要无障碍服务、悬浮窗和 `WRITE_SECURE_SETTINGS`，只需要蓝牙和定位（安卓需要定位权限才能搜索蓝牙设备）。
+- 相同的香氛窗口：浓度、三支香氛瓶、余量重置。选中的香氛瓶会打开并冒出气泡，浓度越高气泡越多。
+- 设置收在“设置”按钮下：香氛机与工作周期、选择香氛机、主题（跟随系统 / 浅色 / 深色）。
+- 点击窗口外部或按返回键关闭窗口。
+
+车上只能安装其中一个版本（完整版或 Lite），新安装的会替换旧的。
+
+Lite 的截图见[上方](#unlimaroma-lite)。
+
 ### 安装
 
 需要一台 Windows 电脑和一根支持数据传输的 USB 线。
 
-1. 从 [Releases](../../releases) 页面下载 `UnlimAroma-<版本>.zip` 并解压（内含 `aroma-app.apk` 和 `install.bat`）。
+1. 从 [Releases](../../releases) 页面下载所需版本的压缩包并解压：`UnlimAroma-<版本>.zip` 为完整版，`UnlimAroma-Lite-<版本>.zip` 为 Lite。内含 APK 和 `install.bat`。
 2. 车辆挂 P 挡，在车机上开启 USB 调试，连接数据线。
 3. 运行 `install.bat`。首次使用时，请在车机屏幕上确认“允许 USB 调试”。
-   安装程序会自动安装应用、授予权限并开启按钮服务，包括车辆重启后自动重新开启。
-4. 在车机上打开 UnlimAroma，点击“搜索”，选择你的 “Fresh Air”。搜索前请先断开香氛机与手机（微信）的连接，否则无法搜索到。
-5. 打开空调界面，即可看到“香氛”按钮。
+   完整版：安装程序会自动安装应用、授予权限并开启按钮服务，包括车辆重启后自动重新开启。Lite：仅安装并打开应用。
+4. 在车机上打开 UnlimAroma，点击“搜索”（Lite 需先打开“设置”），选择你的 “Fresh Air”。搜索前请先断开香氛机与手机（微信）的连接，否则无法搜索到。
+5. 完整版：打开空调界面，即可看到“香氛”按钮。Lite：点击图标打开应用。
 
 如果安装程序提示找不到 `adb.exe`，请下载 Windows 版 [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools)，并将 `platform-tools` 文件夹解压到 `install.bat` 旁边。
 也可以通过 UnlimBoostMD 安装器安装本应用。

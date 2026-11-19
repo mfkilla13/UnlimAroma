@@ -1,7 +1,10 @@
 @echo off
-rem UnlimAroma installer: installs the APK on the car over ADB, grants the overlay and
-rem secure-settings permissions, enables the accessibility service, opens the setup screen.
-rem Looks for the APK next to this file (download from GitHub Releases) or in out\ (after build.ps1).
+rem UnlimAroma installer: installs UnlimAroma (full) or UnlimAroma Lite on the car over ADB.
+rem   Full: button on the climate screen; grants the overlay and secure-settings permissions,
+rem         enables the accessibility service, opens the setup screen.
+rem   Lite: a plain app opened from its icon; just installs and opens it.
+rem Looks for the APKs next to this file (from GitHub Releases) or in out\ (after build.ps1).
+rem If both are there it asks which one. Arguments: full | lite to choose, /q to skip the final pause.
 rem Copyright (c) 2026 Alexandru Volovoi. All rights reserved. See LICENSE.
 setlocal EnableExtensions
 chcp 65001 >nul
@@ -10,14 +13,43 @@ set "PKG=aroma.mfkilla.control"
 set "ACT=com.mfkilla.aroma.AromaActivity"
 set "SVC=aroma.mfkilla.control/com.mfkilla.aroma.AromaService"
 
+set "WANT="
+if /i "%~1"=="full" set "WANT=full"
+if /i "%~2"=="full" set "WANT=full"
+if /i "%~1"=="lite" set "WANT=lite"
+if /i "%~2"=="lite" set "WANT=lite"
+set "QUIET="
+if /i "%~1"=="/q" set "QUIET=1"
+if /i "%~2"=="/q" set "QUIET=1"
+
 echo UnlimAroma - установка на машину Li Auto
 echo.
 
-rem ---- APK: next to this file (any aroma-app*.apk, the newest wins), else out\aroma-app.apk
-set "APK="
-for /f "delims=" %%f in ('dir /b /o:d "%~dp0aroma-app*.apk" 2^>nul') do set "APK=%~dp0%%f"
-if not defined APK if exist "%~dp0out\aroma-app.apk" set "APK=%~dp0out\aroma-app.apk"
-if not defined APK goto :no_apk
+rem ---- APKs next to this file (the newest of each wins), else in out\
+set "FULL="
+for /f "delims=" %%f in ('dir /b /o:d "%~dp0aroma-app*.apk" 2^>nul ^| "%SystemRoot%\System32\findstr.exe" /v /i "lite"') do set "FULL=%~dp0%%f"
+if not defined FULL if exist "%~dp0out\aroma-app.apk" set "FULL=%~dp0out\aroma-app.apk"
+set "LITE="
+for /f "delims=" %%f in ('dir /b /o:d "%~dp0aroma-app-lite*.apk" 2^>nul') do set "LITE=%~dp0%%f"
+if not defined LITE if exist "%~dp0out\aroma-app-lite.apk" set "LITE=%~dp0out\aroma-app-lite.apk"
+if not defined FULL if not defined LITE goto :no_apk
+
+rem ---- which one: argument, the only one present, or ask
+if "%WANT%"=="full" if not defined FULL goto :no_apk
+if "%WANT%"=="lite" if not defined LITE goto :no_apk
+if defined WANT goto :chosen
+if not defined LITE set "WANT=full"
+if not defined FULL set "WANT=lite"
+if defined WANT goto :chosen
+echo Какую версию установить?
+echo   1 - UnlimAroma: кнопка «Аромат» прямо на экране климата (служба доступности)
+echo   2 - UnlimAroma Lite: обычное приложение, открывается по значку, без особых разрешений
+echo На машине может стоять только одна из них: новая встанет вместо старой.
+"%SystemRoot%\System32\choice.exe" /c 12 /n /m "Нажмите 1 или 2: "
+if errorlevel 2 (set "WANT=lite") else (set "WANT=full")
+echo.
+:chosen
+if "%WANT%"=="lite" (set "APK=%LITE%") else (set "APK=%FULL%")
 
 rem ---- adb: PATH, next to this file, or the usual install places
 set "ADB="
@@ -28,6 +60,7 @@ if not defined ADB if exist "C:\platform-tools\adb.exe" set "ADB=C:\platform-too
 if not defined ADB if exist "%LOCALAPPDATA%\Android\Sdk\platform-tools\adb.exe" set "ADB=%LOCALAPPDATA%\Android\Sdk\platform-tools\adb.exe"
 if not defined ADB goto :no_adb
 
+if "%WANT%"=="lite" (echo Версия: UnlimAroma Lite) else (echo Версия: UnlimAroma)
 echo Файл:   %APK%
 "%ADB%" start-server >nul 2>nul
 set "DEV="
@@ -35,6 +68,7 @@ for /f "skip=1 tokens=1,2" %%a in ('"%ADB%" devices') do if "%%b"=="device" set 
 if not defined DEV goto :no_dev
 echo Машина: %DEV%
 echo.
+if "%WANT%"=="lite" goto :lite
 
 echo [1/4] Установка приложения...
 "%ADB%" -s %DEV% install -r -g "%APK%"
@@ -65,8 +99,21 @@ echo Готово. На машине в UnlimAroma нажмите «Найти �
 echo затем откройте экран климата - там появится кнопка «Аромат».
 goto :end
 
+:lite
+echo [1/2] Установка приложения...
+"%ADB%" -s %DEV% install -r -g "%APK%"
+if errorlevel 1 goto :install_failed
+
+echo [2/2] Открываю приложение на машине...
+"%ADB%" -s %DEV% shell am start -n %PKG%/%ACT% >nul 2>nul
+
+echo.
+echo Готово. На машине в UnlimAroma Lite откройте «Настройки», нажмите «Найти станции»
+echo и выберите свою «Fresh Air». Значок можно закрепить в нижней панели или на рабочем столе.
+goto :end
+
 :no_apk
-echo [ОШИБКА] Не найден файл aroma-app.apk.
+echo [ОШИБКА] Не найден файл приложения (aroma-app.apk или aroma-app-lite.apk).
 echo Скачайте его со страницы релизов и положите в ту же папку, что и install.bat:
 echo   https://github.com/mfkilla13/UnlimAroma/releases
 goto :end
@@ -92,5 +139,5 @@ goto :end
 
 :end
 echo.
-if /i not "%~1"=="/q" pause
+if not defined QUIET pause
 endlocal
