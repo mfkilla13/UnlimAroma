@@ -23,7 +23,7 @@
 
 ## 🇷🇺 Русский
 
-**UnlimAroma** — приложение для головного устройства **Li Auto**, которое добавляет на экран климата кнопку **«Аромат»** и управляет ароматизатором **Fresh Air** по Bluetooth — так, как будто это штатная функция машины.
+**UnlimAroma** — приложение для головного устройства **Li Auto**, которое добавляет на экран климата кнопку **«Аромат»** и управляет ароматизатором **Fresh Air** (а также **KS_XFF / BDF_XF**) по Bluetooth — так, как будто это штатная функция машины.
 
 ### Возможности
 
@@ -35,6 +35,7 @@
 - Иконка кнопки подсвечивается синим, когда ароматизатор включён.
 - Дневная и ночная тема (автоматически или вручную).
 - Автоподключение к станции и переподключение при потере связи.
+- Два типа ароматизаторов: «Fresh Air» и KS_XFF / BDF_XF (с версии 0.3.0). Тип определяется сам после подключения, окно и кнопки одни и те же. Поддержка KS_XFF / BDF_XF пока не проверена на настоящей станции — если что-то работает не так, пришлите лог `adb logcat -s AROMA` с пометкой, что нажимали.
 - Экран настройки: включение службы, положение кнопки, тема, цикл работа/пауза, поиск и выбор станции.
 - Работает на прошивках на русском, английском, китайском и испанском; интерфейс приложения переводится по языку системы.
 - После перезагрузки машины служба включается сама.
@@ -91,7 +92,7 @@
 2. Машина на P, на машине включена отладка по USB. Подключите кабель.
 3. Запустите `install.bat`. В первый раз подтвердите на экране машины «Разрешить отладку по USB».
    Для полной версии установщик сам поставит приложение, выдаст разрешения и включит службу кнопки — в том числе её автовключение после перезагрузки машины. Lite он просто ставит и открывает.
-4. На машине в UnlimAroma нажмите «Найти станции» (в Lite — сначала «Настройки») и выберите свою «Fresh Air». Перед поиском отключите станцию от телефона (WeChat), иначе её не будет видно.
+4. На машине в UnlimAroma нажмите «Найти станции» (в Lite — сначала «Настройки») и выберите свою станцию: «Fresh Air», KS_XFF или BDF_XF. Перед поиском отключите станцию от телефона (WeChat), иначе её не будет видно.
 5. Полная версия: откройте экран климата — там появится кнопка «Аромат». Lite: открывайте приложение по значку.
 
 Если установщик пишет, что не найден `adb.exe`, скачайте [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools) для Windows и распакуйте папку `platform-tools` рядом с `install.bat`.
@@ -107,7 +108,7 @@
 
 ## 🇬🇧 English
 
-**UnlimAroma** is an app for the **Li Auto** head unit that adds an **"Aroma"** button to the climate screen and controls the **Fresh Air** fragrance station over Bluetooth — so it feels like a built-in feature of the car.
+**UnlimAroma** is an app for the **Li Auto** head unit that adds an **"Aroma"** button to the climate screen and controls the **Fresh Air** fragrance station (and **KS_XFF / BDF_XF** units) over Bluetooth — so it feels like a built-in feature of the car.
 
 ### Features
 
@@ -119,6 +120,7 @@
 - The button icon turns blue while the station is on.
 - Day and night themes (follow the system or set manually).
 - Auto-connect to the station and reconnect when the link drops.
+- Two kinds of fragrance units: "Fresh Air" and KS_XFF / BDF_XF (since 0.3.0). The kind is detected after connecting; the window and buttons are the same. KS_XFF / BDF_XF support has not been checked on a real unit yet; if something is wrong, please send `adb logcat -s AROMA` with a note of what you tapped.
 - Setup screen: service status, button position, theme, work/pause cycle, station scan and selection.
 - Works on Russian, English, Chinese and Spanish firmware; the app UI follows the system language.
 - The service turns itself back on after the car reboots.
@@ -161,7 +163,7 @@ You need a Windows PC and a USB data cable.
 2. Put the car in P and enable USB debugging on the head unit. Connect the cable.
 3. Run `install.bat`. The first time, confirm "Allow USB debugging" on the car screen.
    For the full version the installer installs the app, grants its permissions and enables the button service, including re-enabling it automatically after the car reboots. Lite is simply installed and opened.
-4. In UnlimAroma on the car tap "Find stations" (in Lite open "Settings" first) and select your "Fresh Air". Disconnect the station from your phone (WeChat) first, otherwise it won't be visible.
+4. In UnlimAroma on the car tap "Find stations" (in Lite open "Settings" first) and select your station: "Fresh Air", KS_XFF or BDF_XF. Disconnect the station from your phone (WeChat) first, otherwise it won't be visible.
 5. Full version: open the climate screen — the "Aroma" button is there. Lite: open the app from its icon.
 
 If the installer says `adb.exe` was not found, download [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools) for Windows and unzip the `platform-tools` folder next to `install.bat`.
@@ -177,7 +179,7 @@ The app can also be installed with the UnlimBoostMD installer.
 
 ## 🇨🇳 中文
 
-**UnlimAroma** 是一款用于 **理想汽车（Li Auto）** 车机的应用，它在空调界面中加入 **“香氛”** 按钮，并通过蓝牙控制 **Fresh Air** 香氛机，使用体验如同原厂功能。
+**UnlimAroma** 是一款用于 **理想汽车（Li Auto）** 车机的应用，它在空调界面中加入 **“香氛”** 按钮，并通过蓝牙控制 **Fresh Air** 香氛机（以及 **KS_XFF / BDF_XF** 香氛机），使用体验如同原厂功能。
 
 ### 功能
 
@@ -189,6 +191,7 @@ The app can also be installed with the UnlimBoostMD installer.
 - 香氛机开启时，按钮图标变为蓝色。
 - 日间 / 夜间主题（跟随系统或手动选择）。
 - 自动连接香氛机，断线后自动重连。
+- 支持两种香氛机：“Fresh Air” 和 KS_XFF / BDF_XF（自 0.3.0 起）。连接后自动识别类型，窗口和按钮相同。KS_XFF / BDF_XF 的支持尚未在实机上验证；如有异常，请发送 `adb logcat -s AROMA` 日志并注明当时的操作。
 - 设置界面：服务状态、按钮位置、主题、工作 / 间歇周期、搜索并选择香氛机。
 - 支持俄语、英语、中文和西班牙语固件；应用界面随系统语言切换。
 - 车辆重启后服务自动重新启用。
@@ -231,7 +234,7 @@ Lite 的截图见[上方](#unlimaroma-lite)。
 2. 车辆挂 P 挡，在车机上开启 USB 调试，连接数据线。
 3. 运行 `install.bat`。首次使用时，请在车机屏幕上确认“允许 USB 调试”。
    完整版：安装程序会自动安装应用、授予权限并开启按钮服务，包括车辆重启后自动重新开启。Lite：仅安装并打开应用。
-4. 在车机上打开 UnlimAroma，点击“搜索”（Lite 需先打开“设置”），选择你的 “Fresh Air”。搜索前请先断开香氛机与手机（微信）的连接，否则无法搜索到。
+4. 在车机上打开 UnlimAroma，点击“搜索”（Lite 需先打开“设置”），选择你的香氛机：“Fresh Air”、KS_XFF 或 BDF_XF。搜索前请先断开香氛机与手机（微信）的连接，否则无法搜索到。
 5. 完整版：打开空调界面，即可看到“香氛”按钮。Lite：点击图标打开应用。
 
 如果安装程序提示找不到 `adb.exe`，请下载 Windows 版 [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools)，并将 `platform-tools` 文件夹解压到 `install.bat` 旁边。
